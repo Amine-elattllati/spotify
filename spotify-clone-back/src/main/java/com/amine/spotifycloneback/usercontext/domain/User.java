@@ -1,9 +1,10 @@
 package com.amine.spotifycloneback.usercontext.domain;
 
+import com.amine.spotifycloneback.sharedkernel.domain.AbstractAuditingEntity;
 import jakarta.persistence.*;
 @Entity
 @Table(name = "spotify_user")
-public class User {
+public class User extends AbstractAuditingEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "userSequenceGenerator")
