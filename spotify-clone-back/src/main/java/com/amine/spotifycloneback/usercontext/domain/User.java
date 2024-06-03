@@ -2,10 +2,17 @@ package com.amine.spotifycloneback.usercontext.domain;
 
 import com.amine.spotifycloneback.sharedkernel.domain.AbstractAuditingEntity;
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
+@Data
 @Table(name = "spotify_user")
 public class User extends AbstractAuditingEntity<Long> {
 
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "userSequenceGenerator")
     @SequenceGenerator(name = "userSequenceGenerator",sequenceName = "user_generator",allocationSize = 1)
@@ -26,11 +33,4 @@ public class User extends AbstractAuditingEntity<Long> {
     @Column(name = "image_url")
     private String imageUrl;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
