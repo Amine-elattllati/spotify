@@ -4,11 +4,11 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="00000000000000-seq" author="codecake">
+    <changeSet id="00000000000000-seq" author="amine">
         <createSequence sequenceName="user_generator" startValue="1" incrementBy="1"/>
     </changeSet>
 
-    <changeSet id="00000000000000" author="codecake">
+    <changeSet id="00000000000000" author="amine">
         <createTable tableName="spotify_user">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
@@ -25,11 +25,11 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="00000000000001-seq" author="codecake">
+    <changeSet id="00000000000001-seq" author="amine">
         <createSequence sequenceName="song_generator" startValue="1" incrementBy="1"/>
     </changeSet>
 
-    <changeSet id="00000000000001" author="codecake">
+    <changeSet id="00000000000001" author="amine">
         <createTable tableName="song">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
@@ -52,7 +52,7 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="00000000000002" author="codecake">
+    <changeSet id="00000000000002" author="amine">
         <createTable tableName="song_content">
             <column name="song_id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
@@ -66,7 +66,7 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="00000000000003" author="codecake">
+    <changeSet id="00000000000003" author="amine">
         <createTable tableName="favorite_song">
             <column name="user_email" type="varchar(255)">
                 <constraints nullable="false"/>
